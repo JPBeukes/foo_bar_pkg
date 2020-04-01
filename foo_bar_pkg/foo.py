@@ -1,1 +1,2 @@
-print('foo')
+def foo_print():
+	print('foo')
