@@ -8,10 +8,10 @@ setuptools.setup(
     version="0.0.1",
     author="Jacques Beukes",
     author_email="jpbeukes01@gmail.com",
-    description="A small foo bar package",
+    description="A small foo bar package for testing Python packaging",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/pypa/sampleproject",
+    url="https://github.com/JPBeukes/foo_bar_pkg",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
