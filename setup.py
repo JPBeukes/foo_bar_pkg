@@ -4,8 +4,8 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="foo-bar-pkg-test", # Replace with your own username
-    version="0.0.4",
+    name="foo-bar-pkg",  # Replace with your own username
+    version="0.0.5",
     author="Jacques Beukes",
     author_email="jpbeukes01@gmail.com",
     description="A small foo bar package for testing Python packaging",
