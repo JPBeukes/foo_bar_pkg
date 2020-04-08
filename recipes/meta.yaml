@@ -1,0 +1,42 @@
+{% set name = "foo-bar-pkg" %}
+{% set version = "0.0.5" %}
+
+package:
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
+
+source:
+  url: "https://test.pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
+  sha256: 4f932ec4b98b9ddf95ae82f2a2f0d1d7b2656325a75b9cbab8340a797eb5ef26
+  # path: /home/jpb/repos/foo_bar_pkg
+  # git_url: "https://github.com/JPBeukes/foo_bar_pkg"
+  # git_rev: v0.0.5
+  # git_depth: 1
+  
+build:
+  number: 0
+  script: "{{ PYTHON }} -m pip install . -vv"
+
+requirements:
+  host:
+    - pip
+    - python
+  run:
+    - python
+
+test:
+  imports:
+    - foo_bar
+
+about:
+  home: "https://github.com/JPBeukes/foo_bar_pkg"
+  license: MIT
+  license_family: MIT
+  license_file: 
+  summary: "A small foo bar package for testing Python packaging"
+  doc_url: 
+  dev_url: 
+
+extra:
+  recipe-maintainers:
+    - your-github-id-here
